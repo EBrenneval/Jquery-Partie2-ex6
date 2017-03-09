@@ -18,14 +18,19 @@
 <script>
 /*Au passage de la souris sur un bouton de couleur, colorer le texte.
 Le texte doit redevenir noir quand la souris quitte le bouton.*/
-$("#green").mouseover(function(){
-  $("#texte").css("color","green");
-})
-$("#red").mouseover(function(){
-  $("#texte").css("color","red");
-})
-$("#blue").mouseover(function(){
-  $("#texte").css("color","blue");
+$(document).ready(function(){
+  $("#green").mouseover(function(){  //  qd la souris passe
+    $("#texte").css("color","green");
+  })
+  $("#red").mouseover(function(){
+    $("#texte").css("color","red");
+  })
+  $("#blue").mouseover(function(){
+    $("#texte").css("color","blue");
+      })
+  $(".color").mouseout(function(){   // qd la souris sort
+    $("#texte").css("color","black");
+  });
 })
 </script>
 </body>
